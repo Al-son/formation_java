@@ -1,0 +1,5 @@
+greeting=Good morning
+farewell=Bye bye
+how_are_you=How are you?
+your_name=What's your name?
+my_array=Godson;Lem;Eraste;Fils
