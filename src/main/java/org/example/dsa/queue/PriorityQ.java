@@ -17,7 +17,7 @@ public class PriorityQ {
         if (nItems == 0) {
             quArray[nItems++] = item;
         } else {
-            for (j = nItems - 1; j >= 0; j++) {
+            for (j = nItems - 1; j >= 0; j--) {
                 if (item > quArray[j])
                     quArray[j + 1] = quArray[j];
                 else
@@ -29,10 +29,16 @@ public class PriorityQ {
     }
 
     public long remove() {
-        return quArray[nItems--];
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
+        return quArray[--nItems];
     }
 
-    public long peekMin() {
+public long peekMax() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
         return quArray[nItems - 1];
     }
 
