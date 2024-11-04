@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class BracketApp {
     public static void main(String[] args) throws IOException {
         String input;
-        while(true) {
+        while (true) {
             System.out.print("Enter string containing delimiters: ");
             System.out.flush();
             input = getString();

@@ -1,20 +1,18 @@
 package org.example.dsa.stack;
 
-import java.io.BufferedReader;
-
 public class InToPost {
     private StackX theStack;
     private String input;
     private String output = "";
 
-    public InToPost(String in){
+    public InToPost(String in) {
         input = in;
         int stackSize = input.length();
         theStack = new StackX(stackSize);
     }
 
-    public String doTrans(){
-        for (int j=0; j<input.length(); j++){
+    public String doTrans() {
+        for (int j = 0; j < input.length(); j++) {
             char ch = input.charAt(j);
             theStack.displayStack("For " + ch + " ");
             switch (ch) {
@@ -45,7 +43,7 @@ public class InToPost {
         return output;
     }
 
-    public void gotOper(char opThis, int prec1){
+    public void gotOper(char opThis, int prec1) {
         while (!theStack.isEmpty()) {
             char opTop = theStack.pop();
             if (opTop == '(') {

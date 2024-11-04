@@ -26,10 +26,9 @@ public class BracketChecker {
                     if (!theStack.isEmpty()) {
                         char chx = (char) theStack.pop();
                         if ((ch == '}' && chx != '{') || (ch == ']' && chx != '[') || (ch == ')' && chx != '('))
-                            System.out.println("Error: " +ch+ " at " + j);
-                    }
-                    else
-                        System.out.println("Error: " +ch+ " at " + j);
+                            System.out.println("Error: " + ch + " at " + j);
+                    } else
+                        System.out.println("Error: " + ch + " at " + j);
                     break;
                 default:
                     break;

@@ -11,8 +11,7 @@ public class ReverseApp {
             System.out.print("Enter a String");
             System.out.flush();
             input = getString();
-            if (input.isEmpty())
-                break;
+            if (input.isEmpty()) break;
 
             Reverser theReverser = new Reverser(input);
             output = theReverser.doRev();
