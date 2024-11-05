@@ -30,12 +30,11 @@ public class FirstLastList {
         last = newLink;
     }
 
-    public long deleteFirst(){
+    public void deleteFirst(){
         long temp = (long) first.dData;
         if (first.next == null)
             last = null;
         first = first.next;
-        return temp;
     }
 
     public void displayList() {
