@@ -37,7 +37,7 @@ public class FirstLastList {
         first = first.next;
     }
 
-    public void displayList() {
+    public long displayList() {
         System.out.println("List(first-->last)");
         Link1 current = first;
         while(current != null) {
@@ -45,5 +45,6 @@ public class FirstLastList {
             current = current.next;
         }
         System.out.println(" ");
+        return 0;
     }
 }
