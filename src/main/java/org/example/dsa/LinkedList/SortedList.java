@@ -35,7 +35,7 @@ public class SortedList {
 
     public SortedList(Link1[] linkArr) {
         first = null;
-        for (int j = 0; j < linkArr.length; j++) {
+        for(int j = 0; j < linkArr.length; j++) {
             insert(linkArr[j]);
         }
     }
