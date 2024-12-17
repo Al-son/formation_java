@@ -8,6 +8,9 @@ public class QuickSortApp {
             long n = (int)(java.lang.Math.random()*99);
             arr.insert(n);
         }
+//        arr.display();
+//        arr.quickSort();
+//        arr.display();
         arr.display();
         arr.quickSort();
         arr.display();
