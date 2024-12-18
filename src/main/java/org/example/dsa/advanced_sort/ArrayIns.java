@@ -1,9 +1,7 @@
 package org.example.dsa.advanced_sort;
 
-import javax.swing.*;
-
 public class ArrayIns {
-    private long[] theArray;
+    private final long[] theArray;
     private int nElems;
 
     public ArrayIns(int max) {
