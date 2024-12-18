@@ -1,4 +1,4 @@
-package org.example.stream;
+package org.example.jr_back_courses.stream;
 
 import java.sql.SQLOutput;
 import java.util.Arrays;
