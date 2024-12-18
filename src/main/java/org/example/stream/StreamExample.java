@@ -1,7 +1,9 @@
 package org.example.stream;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -55,5 +57,42 @@ public class StreamExample {
         listOfLists.stream()
                 .flatMap(List::stream)
                 .forEach(System.out::println);
+        System.out.println("----------------------------------------------");
+
+        // Terminal operations
+        List<String> list6 = Arrays.asList("apple", "banana", "cherry");
+        list6.stream()
+                .forEach(System.out::println);
+
+        List<String> list7 = Arrays.asList("apple", "banana", "cherry");
+        List<String> result = list7.stream()
+                .filter(s -> s.startsWith("a"))
+                .collect(Collectors.toList());
+        System.out.println("----------------------------------------------");
+
+        List<Integer> list8 = Arrays.asList(1, 2, 3, 4);
+        int sum = list8.stream()
+                .reduce(0, (a, b) -> a + b);
+        System.out.println("------------------------------------------------");
+
+        List<Integer> list9 = Arrays.asList(1, 2, 3, 4);
+        Optional<Integer> max = list9.stream().max(Integer::compareTo);
+        max.ifPresent(System.out::println);
+        System.out.println("--------------------------------------------------");
+
+        List<String> list10 = Arrays.asList("apple", "banana", "cherry");
+        boolean containsA = list10.stream().anyMatch(s -> s.contains("a"));
+        System.out.println(containsA);
+        System.out.println("-----------------------------------------------------");
+
+        List<String> list11 = Arrays.asList("apple", "banana", "cherry");
+        Optional<String> first = list11.stream().findFirst();
+        first.ifPresent(System.out::println);
+        System.out.println("--------------------------------------------------------");
+
+        List<String> list12 = Arrays.asList("apple", "banana", "cherry", "date");
+        list12.parallelStream()
+                .forEach(s -> System.out.printf(s + "(processed by " + Thread.currentThread().getName() + ")"));
     }
+
 }
